@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		7CB7302985653F512BA3808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B202259909B32DA975447F /* libPods.a */; };
 		EDC716EA1BB8CCAD008B2CF0 /* DTDetailArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC716E91BB8CCAD008B2CF0 /* DTDetailArticle.m */; settings = {ASSET_TAGS = (); }; };
+		EDD73CA71BB9924000DD3FD8 /* ALHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD73CA21BB9924000DD3FD8 /* ALHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		EDDE7DC71BB8C53A00C24368 /* DTDetailViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDE7DC61BB8C53A00C24368 /* DTDetailViewContoller.m */; settings = {ASSET_TAGS = (); }; };
 		EDE244461BB644BB0066E84F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE244451BB644BB0066E84F /* main.m */; };
 		EDE244491BB644BB0066E84F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE244481BB644BB0066E84F /* AppDelegate.m */; };
@@ -46,6 +47,8 @@
 		C08781E0005BC9F6D33E0C2B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		EDC716E81BB8CCAD008B2CF0 /* DTDetailArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDetailArticle.h; path = DetailView/Model/DTDetailArticle.h; sourceTree = "<group>"; };
 		EDC716E91BB8CCAD008B2CF0 /* DTDetailArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDetailArticle.m; path = DetailView/Model/DTDetailArticle.m; sourceTree = "<group>"; };
+		EDD73CA11BB9924000DD3FD8 /* ALHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALHeaderView.h; sourceTree = "<group>"; };
+		EDD73CA21BB9924000DD3FD8 /* ALHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALHeaderView.m; sourceTree = "<group>"; };
 		EDDE7DC51BB8C53A00C24368 /* DTDetailViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDetailViewContoller.h; path = DetailView/Controller/DTDetailViewContoller.h; sourceTree = "<group>"; };
 		EDDE7DC61BB8C53A00C24368 /* DTDetailViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDetailViewContoller.m; path = DetailView/Controller/DTDetailViewContoller.m; sourceTree = "<group>"; };
 		EDE244411BB644BB0066E84F /* DevToutiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevToutiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -116,6 +119,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		EDD73C9F1BB9923400DD3FD8 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				EDD73CA01BB9924000DD3FD8 /* ALHeaderView */,
+			);
+			name = Common;
+			sourceTree = "<group>";
+		};
+		EDD73CA01BB9924000DD3FD8 /* ALHeaderView */ = {
+			isa = PBXGroup;
+			children = (
+				EDD73CA11BB9924000DD3FD8 /* ALHeaderView.h */,
+				EDD73CA21BB9924000DD3FD8 /* ALHeaderView.m */,
+			);
+			path = ALHeaderView;
+			sourceTree = "<group>";
+		};
 		EDDE7DC11BB8C4D500C24368 /* DetaiView */ = {
 			isa = PBXGroup;
 			children = (
@@ -176,6 +196,7 @@
 		EDE244431BB644BB0066E84F /* DevToutiao */ = {
 			isa = PBXGroup;
 			children = (
+				EDD73C9F1BB9923400DD3FD8 /* Common */,
 				EDE244871BB68B120066E84F /* Macro */,
 				EDE244781BB67F020066E84F /* HomeView */,
 				EDDE7DC11BB8C4D500C24368 /* DetaiView */,
@@ -452,6 +473,7 @@
 				EDDE7DC71BB8C53A00C24368 /* DTDetailViewContoller.m in Sources */,
 				EDC716EA1BB8CCAD008B2CF0 /* DTDetailArticle.m in Sources */,
 				EDE2447B1BB680250066E84F /* DTDailies.m in Sources */,
+				EDD73CA71BB9924000DD3FD8 /* ALHeaderView.m in Sources */,
 				EDE244491BB644BB0066E84F /* AppDelegate.m in Sources */,
 				EDE2447F1BB680E40066E84F /* DTArticle.m in Sources */,
 				EDE244461BB644BB0066E84F /* main.m in Sources */,
