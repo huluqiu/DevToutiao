@@ -28,6 +28,20 @@
     return self;
 }
 
+- (instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier{
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        _titleLabel = [[UILabel alloc] init];
+        [self addSubview:_titleLabel];
+        
+        _siteNameLabel = [[UILabel alloc] init];
+        [self addSubview:_siteNameLabel];
+        
+        _thumbnailImageView = [[UIImageView alloc] init];
+        [self addSubview:_thumbnailImageView];
+    }
+    return self;
+}
+
 - (void)setCellContentWithArticle:(DTArticle *)article{
     __weak typeof(self) weakSelf = self;
     

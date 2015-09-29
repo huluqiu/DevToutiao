@@ -8,8 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
-@interface DTDetailViewContoller : UIViewController
+@interface DTDetailViewContoller :UIViewController
 
-@property (assign) id articleId;
+- (instancetype)initWithID:(id)articleId;
 
 @end
