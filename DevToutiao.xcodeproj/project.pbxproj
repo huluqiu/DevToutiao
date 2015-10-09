@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		7CB7302985653F512BA3808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B202259909B32DA975447F /* libPods.a */; };
+		ED63F5481BBAAC4800EC6DE1 /* DTPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = ED63F5471BBAAC4800EC6DE1 /* DTPromotion.m */; settings = {ASSET_TAGS = (); }; };
 		EDC716EA1BB8CCAD008B2CF0 /* DTDetailArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC716E91BB8CCAD008B2CF0 /* DTDetailArticle.m */; settings = {ASSET_TAGS = (); }; };
 		EDD73CA71BB9924000DD3FD8 /* ALHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD73CA21BB9924000DD3FD8 /* ALHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		EDDE7DC71BB8C53A00C24368 /* DTDetailViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDE7DC61BB8C53A00C24368 /* DTDetailViewContoller.m */; settings = {ASSET_TAGS = (); }; };
@@ -45,6 +46,8 @@
 		623AD2CF4F8D7F35C4129A9F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		64B202259909B32DA975447F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08781E0005BC9F6D33E0C2B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		ED63F5461BBAAC4800EC6DE1 /* DTPromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPromotion.h; path = HomeView/Model/DTPromotion.h; sourceTree = "<group>"; };
+		ED63F5471BBAAC4800EC6DE1 /* DTPromotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPromotion.m; path = HomeView/Model/DTPromotion.m; sourceTree = "<group>"; };
 		EDC716E81BB8CCAD008B2CF0 /* DTDetailArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDetailArticle.h; path = DetailView/Model/DTDetailArticle.h; sourceTree = "<group>"; };
 		EDC716E91BB8CCAD008B2CF0 /* DTDetailArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDetailArticle.m; path = DetailView/Model/DTDetailArticle.m; sourceTree = "<group>"; };
 		EDD73CA11BB9924000DD3FD8 /* ALHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALHeaderView.h; sourceTree = "<group>"; };
@@ -254,6 +257,8 @@
 				EDE2447A1BB680250066E84F /* DTDailies.m */,
 				EDE2447D1BB680E40066E84F /* DTArticle.h */,
 				EDE2447E1BB680E40066E84F /* DTArticle.m */,
+				ED63F5461BBAAC4800EC6DE1 /* DTPromotion.h */,
+				ED63F5471BBAAC4800EC6DE1 /* DTPromotion.m */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -477,6 +482,7 @@
 				EDE244491BB644BB0066E84F /* AppDelegate.m in Sources */,
 				EDE2447F1BB680E40066E84F /* DTArticle.m in Sources */,
 				EDE244461BB644BB0066E84F /* main.m in Sources */,
+				ED63F5481BBAAC4800EC6DE1 /* DTPromotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

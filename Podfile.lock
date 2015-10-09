@@ -20,30 +20,16 @@ PODS:
   - AFNetworking/UIKit (2.6.0):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
-  - DTCoreText (1.6.16):
-    - DTFoundation/Core (~> 1.7.5)
-    - DTFoundation/DTAnimatedGIF (~> 1.7.5)
-    - DTFoundation/DTHTMLParser (~> 1.7.5)
-    - DTFoundation/UIKit (~> 1.7.5)
-  - DTFoundation/Core (1.7.7)
-  - DTFoundation/DTAnimatedGIF (1.7.7)
-  - DTFoundation/DTHTMLParser (1.7.7):
-    - DTFoundation/Core
-  - DTFoundation/UIKit (1.7.7):
-    - DTFoundation/Core
   - Masonry (0.6.3)
   - MJRefresh (2.4.11)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.6.0)
-  - DTCoreText (~> 1.6.16)
   - Masonry (~> 0.6.3)
   - MJRefresh (~> 2.4.11)
 
 SPEC CHECKSUMS:
   AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
-  DTCoreText: 934a16fe9ffdd169c96261721b39dc312b75713d
-  DTFoundation: c9b3362b83f0017389082ec067ede719826a579d
   Masonry: ff105a956abcd19a618b2028b121cb638d7a8e2f
   MJRefresh: b327947f35ab3eb16ca42646b26f7347e6aa7186
 
