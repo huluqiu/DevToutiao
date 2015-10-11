@@ -44,17 +44,17 @@
                                 </connections>
                             </containerView>
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="41j-5a-14K">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                 <animations/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="VjX-Ph-B9X"/>
+                                    <constraint firstAttribute="height" constant="250" id="VjX-Ph-B9X"/>
                                 </constraints>
                                 <connections>
                                     <segue destination="LJp-2q-373" kind="embed" identifier="promotionview_embed" id="nSA-9S-teO"/>
                                 </connections>
                             </containerView>
                             <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="D0c-VM-3Ht">
-                                <rect key="frame" x="281" y="163" width="39" height="37"/>
+                                <rect key="frame" x="281" y="213" width="39" height="37"/>
                                 <animations/>
                             </pageControl>
                         </subviews>
@@ -91,11 +91,11 @@
                         <viewControllerLayoutGuide type="bottom" id="Z3Z-DT-bbX"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="2uZ-Fi-hQY">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xOR-qi-FbC">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                 <animations/>
                                 <connections>
                                     <outlet property="delegate" destination="LJp-2q-373" id="JQU-vl-Pqs"/>
@@ -171,11 +171,11 @@
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQd-Ep-4aa" customClass="DTDetailHeaderView">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="250"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="jkg-w0-H3K"/>
+                                    <constraint firstAttribute="height" constant="250" id="jkg-w0-H3K"/>
                                 </constraints>
                             </view>
                         </subviews>

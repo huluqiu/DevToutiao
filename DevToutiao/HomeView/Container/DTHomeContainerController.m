@@ -45,7 +45,8 @@
     if ([segue.identifier isEqualToString:@"tableview_embed"]) {
         self.tableVC = (DTHomeTableViewController *)[segue destinationViewController];
         self.tableVC.delegate = self;
-        self.promotionHeight = self.promotionHeightConstraint.constant;
+        self.promotionHeight = [[UIScreen mainScreen] bounds].size.height * 2/5;
+        self.promotionHeightConstraint.constant = self.promotionHeight;
         self.tableVC.tableView.contentInset = UIEdgeInsetsMake(self.promotionHeight - 20, 0, 0, 0);
     }else if ([segue.identifier isEqualToString:@"promotionview_embed"]){
         self.promotionVC = (DTPromotionViewController *)[segue destinationViewController];

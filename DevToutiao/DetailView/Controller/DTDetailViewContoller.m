@@ -33,7 +33,8 @@
     
     self.navigationController.navigationBar.hidden = YES;
     
-    self.headerViewHeight = self.headerViewConstraint.constant;
+    self.headerViewHeight = [[UIScreen mainScreen] bounds].size.height * 2/5;
+    self.headerViewConstraint.constant = self.headerViewHeight;
     self.webView.scrollView.contentInset = UIEdgeInsetsMake(self.headerViewHeight - 20, 0, 0, 0);
     self.webView.scrollView.delegate = self;
     
