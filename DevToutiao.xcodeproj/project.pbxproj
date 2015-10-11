@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		7CB7302985653F512BA3808D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 64B202259909B32DA975447F /* libPods.a */; };
-		ED63F5481BBAAC4800EC6DE1 /* DTPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = ED63F5471BBAAC4800EC6DE1 /* DTPromotion.m */; settings = {ASSET_TAGS = (); }; };
+		ED0444DE1BCA78AC00A37F92 /* DTHomeContainerController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0444DD1BCA78AC00A37F92 /* DTHomeContainerController.m */; settings = {ASSET_TAGS = (); }; };
+		ED0444E91BCA795C00A37F92 /* DTArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0444E61BCA795C00A37F92 /* DTArticle.m */; settings = {ASSET_TAGS = (); }; };
+		ED0444EA1BCA795C00A37F92 /* DTDailies.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0444E81BCA795C00A37F92 /* DTDailies.m */; settings = {ASSET_TAGS = (); }; };
+		ED0444ED1BCA796600A37F92 /* DTArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0444EC1BCA796600A37F92 /* DTArticleCell.m */; settings = {ASSET_TAGS = (); }; };
+		ED0444F01BCA796C00A37F92 /* DTHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0444EF1BCA796C00A37F92 /* DTHomeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
+		ED0444F31BCA797800A37F92 /* DTPromotion.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0444F21BCA797800A37F92 /* DTPromotion.m */; settings = {ASSET_TAGS = (); }; };
+		ED0444F91BCA79A200A37F92 /* DTPromotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0444F81BCA79A200A37F92 /* DTPromotionViewController.m */; settings = {ASSET_TAGS = (); }; };
+		ED0445041BCA930300A37F92 /* DTHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0445031BCA930300A37F92 /* DTHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		ED0445071BCA93CE00A37F92 /* DTDetailHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0445061BCA93CE00A37F92 /* DTDetailHeaderView.m */; settings = {ASSET_TAGS = (); }; };
+		ED04450A1BCA945D00A37F92 /* DTHomeHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = ED0445091BCA945D00A37F92 /* DTHomeHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		EDC716EA1BB8CCAD008B2CF0 /* DTDetailArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDC716E91BB8CCAD008B2CF0 /* DTDetailArticle.m */; settings = {ASSET_TAGS = (); }; };
-		EDD73CA71BB9924000DD3FD8 /* ALHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = EDD73CA21BB9924000DD3FD8 /* ALHeaderView.m */; settings = {ASSET_TAGS = (); }; };
 		EDDE7DC71BB8C53A00C24368 /* DTDetailViewContoller.m in Sources */ = {isa = PBXBuildFile; fileRef = EDDE7DC61BB8C53A00C24368 /* DTDetailViewContoller.m */; settings = {ASSET_TAGS = (); }; };
 		EDE244461BB644BB0066E84F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE244451BB644BB0066E84F /* main.m */; };
 		EDE244491BB644BB0066E84F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE244481BB644BB0066E84F /* AppDelegate.m */; };
@@ -19,10 +27,6 @@
 		EDE244541BB644BB0066E84F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EDE244521BB644BB0066E84F /* LaunchScreen.storyboard */; };
 		EDE2445F1BB644BB0066E84F /* DevToutiaoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2445E1BB644BB0066E84F /* DevToutiaoTests.m */; };
 		EDE2446A1BB644BB0066E84F /* DevToutiaoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE244691BB644BB0066E84F /* DevToutiaoUITests.m */; };
-		EDE2447B1BB680250066E84F /* DTDailies.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2447A1BB680250066E84F /* DTDailies.m */; settings = {ASSET_TAGS = (); }; };
-		EDE2447F1BB680E40066E84F /* DTArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2447E1BB680E40066E84F /* DTArticle.m */; settings = {ASSET_TAGS = (); }; };
-		EDE244861BB68A570066E84F /* DTHomeTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE244851BB68A570066E84F /* DTHomeTableViewController.m */; settings = {ASSET_TAGS = (); }; };
-		EDE2448C1BB6D44B0066E84F /* DTArticleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = EDE2448B1BB6D44B0066E84F /* DTArticleCell.m */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,12 +50,28 @@
 		623AD2CF4F8D7F35C4129A9F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		64B202259909B32DA975447F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08781E0005BC9F6D33E0C2B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
-		ED63F5461BBAAC4800EC6DE1 /* DTPromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPromotion.h; path = HomeView/Model/DTPromotion.h; sourceTree = "<group>"; };
-		ED63F5471BBAAC4800EC6DE1 /* DTPromotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPromotion.m; path = HomeView/Model/DTPromotion.m; sourceTree = "<group>"; };
+		ED0444DC1BCA78AC00A37F92 /* DTHomeContainerController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTHomeContainerController.h; path = HomeView/Container/DTHomeContainerController.h; sourceTree = "<group>"; };
+		ED0444DD1BCA78AC00A37F92 /* DTHomeContainerController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTHomeContainerController.m; path = HomeView/Container/DTHomeContainerController.m; sourceTree = "<group>"; };
+		ED0444E51BCA795C00A37F92 /* DTArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTArticle.h; path = HomeView/ArticleList/DTArticle.h; sourceTree = "<group>"; };
+		ED0444E61BCA795C00A37F92 /* DTArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTArticle.m; path = HomeView/ArticleList/DTArticle.m; sourceTree = "<group>"; };
+		ED0444E71BCA795C00A37F92 /* DTDailies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDailies.h; path = HomeView/ArticleList/DTDailies.h; sourceTree = "<group>"; };
+		ED0444E81BCA795C00A37F92 /* DTDailies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDailies.m; path = HomeView/ArticleList/DTDailies.m; sourceTree = "<group>"; };
+		ED0444EB1BCA796600A37F92 /* DTArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTArticleCell.h; path = HomeView/ArticleList/DTArticleCell.h; sourceTree = "<group>"; };
+		ED0444EC1BCA796600A37F92 /* DTArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTArticleCell.m; path = HomeView/ArticleList/DTArticleCell.m; sourceTree = "<group>"; };
+		ED0444EE1BCA796C00A37F92 /* DTHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTHomeTableViewController.h; path = HomeView/ArticleList/DTHomeTableViewController.h; sourceTree = "<group>"; };
+		ED0444EF1BCA796C00A37F92 /* DTHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTHomeTableViewController.m; path = HomeView/ArticleList/DTHomeTableViewController.m; sourceTree = "<group>"; };
+		ED0444F11BCA797800A37F92 /* DTPromotion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPromotion.h; path = HomeView/Promotion/DTPromotion.h; sourceTree = "<group>"; };
+		ED0444F21BCA797800A37F92 /* DTPromotion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPromotion.m; path = HomeView/Promotion/DTPromotion.m; sourceTree = "<group>"; };
+		ED0444F71BCA79A200A37F92 /* DTPromotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTPromotionViewController.h; path = HomeView/Promotion/DTPromotionViewController.h; sourceTree = "<group>"; };
+		ED0444F81BCA79A200A37F92 /* DTPromotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTPromotionViewController.m; path = HomeView/Promotion/DTPromotionViewController.m; sourceTree = "<group>"; };
+		ED0445021BCA930300A37F92 /* DTHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTHeaderView.h; path = Common/DTHeaderView.h; sourceTree = "<group>"; };
+		ED0445031BCA930300A37F92 /* DTHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTHeaderView.m; path = Common/DTHeaderView.m; sourceTree = "<group>"; };
+		ED0445051BCA93CE00A37F92 /* DTDetailHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDetailHeaderView.h; path = DetailView/View/DTDetailHeaderView.h; sourceTree = "<group>"; };
+		ED0445061BCA93CE00A37F92 /* DTDetailHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDetailHeaderView.m; path = DetailView/View/DTDetailHeaderView.m; sourceTree = "<group>"; };
+		ED0445081BCA945D00A37F92 /* DTHomeHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTHomeHeaderView.h; path = HomeView/Promotion/DTHomeHeaderView.h; sourceTree = "<group>"; };
+		ED0445091BCA945D00A37F92 /* DTHomeHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTHomeHeaderView.m; path = HomeView/Promotion/DTHomeHeaderView.m; sourceTree = "<group>"; };
 		EDC716E81BB8CCAD008B2CF0 /* DTDetailArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDetailArticle.h; path = DetailView/Model/DTDetailArticle.h; sourceTree = "<group>"; };
 		EDC716E91BB8CCAD008B2CF0 /* DTDetailArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDetailArticle.m; path = DetailView/Model/DTDetailArticle.m; sourceTree = "<group>"; };
-		EDD73CA11BB9924000DD3FD8 /* ALHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ALHeaderView.h; sourceTree = "<group>"; };
-		EDD73CA21BB9924000DD3FD8 /* ALHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ALHeaderView.m; sourceTree = "<group>"; };
 		EDDE7DC51BB8C53A00C24368 /* DTDetailViewContoller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDetailViewContoller.h; path = DetailView/Controller/DTDetailViewContoller.h; sourceTree = "<group>"; };
 		EDDE7DC61BB8C53A00C24368 /* DTDetailViewContoller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDetailViewContoller.m; path = DetailView/Controller/DTDetailViewContoller.m; sourceTree = "<group>"; };
 		EDE244411BB644BB0066E84F /* DevToutiao.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DevToutiao.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,15 +88,7 @@
 		EDE244651BB644BB0066E84F /* DevToutiaoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DevToutiaoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDE244691BB644BB0066E84F /* DevToutiaoUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DevToutiaoUITests.m; sourceTree = "<group>"; };
 		EDE2446B1BB644BB0066E84F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		EDE244791BB680250066E84F /* DTDailies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTDailies.h; path = HomeView/Model/DTDailies.h; sourceTree = "<group>"; };
-		EDE2447A1BB680250066E84F /* DTDailies.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTDailies.m; path = HomeView/Model/DTDailies.m; sourceTree = "<group>"; };
-		EDE2447D1BB680E40066E84F /* DTArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTArticle.h; path = HomeView/Model/DTArticle.h; sourceTree = "<group>"; };
-		EDE2447E1BB680E40066E84F /* DTArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTArticle.m; path = HomeView/Model/DTArticle.m; sourceTree = "<group>"; };
-		EDE244841BB68A570066E84F /* DTHomeTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTHomeTableViewController.h; path = HomeView/Controller/DTHomeTableViewController.h; sourceTree = "<group>"; };
-		EDE244851BB68A570066E84F /* DTHomeTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTHomeTableViewController.m; path = HomeView/Controller/DTHomeTableViewController.m; sourceTree = "<group>"; };
 		EDE244881BB68B3E0066E84F /* DTMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = DTMacro.h; path = Macro/DTMacro.h; sourceTree = "<group>"; };
-		EDE2448A1BB6D44B0066E84F /* DTArticleCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = DTArticleCell.h; path = HomeView/View/DTArticleCell.h; sourceTree = "<group>"; };
-		EDE2448B1BB6D44B0066E84F /* DTArticleCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = DTArticleCell.m; path = HomeView/View/DTArticleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,21 +134,98 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		ED0444D91BCA77B800A37F92 /* Promotion */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444E41BCA794E00A37F92 /* Model */,
+				ED0444E31BCA794A00A37F92 /* View */,
+				ED0444E21BCA794500A37F92 /* Controller */,
+			);
+			name = Promotion;
+			sourceTree = "<group>";
+		};
+		ED0444DA1BCA77C300A37F92 /* ArticleList */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444E11BCA794000A37F92 /* Model */,
+				ED0444E01BCA793C00A37F92 /* VIew */,
+				ED0444DF1BCA793000A37F92 /* Controller */,
+			);
+			name = ArticleList;
+			sourceTree = "<group>";
+		};
+		ED0444DB1BCA77DB00A37F92 /* Container */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444DC1BCA78AC00A37F92 /* DTHomeContainerController.h */,
+				ED0444DD1BCA78AC00A37F92 /* DTHomeContainerController.m */,
+			);
+			name = Container;
+			sourceTree = "<group>";
+		};
+		ED0444DF1BCA793000A37F92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444EE1BCA796C00A37F92 /* DTHomeTableViewController.h */,
+				ED0444EF1BCA796C00A37F92 /* DTHomeTableViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED0444E01BCA793C00A37F92 /* VIew */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444EB1BCA796600A37F92 /* DTArticleCell.h */,
+				ED0444EC1BCA796600A37F92 /* DTArticleCell.m */,
+			);
+			name = VIew;
+			sourceTree = "<group>";
+		};
+		ED0444E11BCA794000A37F92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444E51BCA795C00A37F92 /* DTArticle.h */,
+				ED0444E61BCA795C00A37F92 /* DTArticle.m */,
+				ED0444E71BCA795C00A37F92 /* DTDailies.h */,
+				ED0444E81BCA795C00A37F92 /* DTDailies.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		ED0444E21BCA794500A37F92 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444F71BCA79A200A37F92 /* DTPromotionViewController.h */,
+				ED0444F81BCA79A200A37F92 /* DTPromotionViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		ED0444E31BCA794A00A37F92 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				ED0445081BCA945D00A37F92 /* DTHomeHeaderView.h */,
+				ED0445091BCA945D00A37F92 /* DTHomeHeaderView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		ED0444E41BCA794E00A37F92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				ED0444F11BCA797800A37F92 /* DTPromotion.h */,
+				ED0444F21BCA797800A37F92 /* DTPromotion.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EDD73C9F1BB9923400DD3FD8 /* Common */ = {
 			isa = PBXGroup;
 			children = (
-				EDD73CA01BB9924000DD3FD8 /* ALHeaderView */,
+				ED0445021BCA930300A37F92 /* DTHeaderView.h */,
+				ED0445031BCA930300A37F92 /* DTHeaderView.m */,
 			);
 			name = Common;
-			sourceTree = "<group>";
-		};
-		EDD73CA01BB9924000DD3FD8 /* ALHeaderView */ = {
-			isa = PBXGroup;
-			children = (
-				EDD73CA11BB9924000DD3FD8 /* ALHeaderView.h */,
-				EDD73CA21BB9924000DD3FD8 /* ALHeaderView.m */,
-			);
-			path = ALHeaderView;
 			sourceTree = "<group>";
 		};
 		EDDE7DC11BB8C4D500C24368 /* DetaiView */ = {
@@ -161,6 +250,8 @@
 		EDDE7DC31BB8C4FA00C24368 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				ED0445051BCA93CE00A37F92 /* DTDetailHeaderView.h */,
+				ED0445061BCA93CE00A37F92 /* DTDetailHeaderView.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -243,33 +334,11 @@
 		EDE244781BB67F020066E84F /* HomeView */ = {
 			isa = PBXGroup;
 			children = (
-				EDE2447C1BB6803E0066E84F /* Model */,
-				EDE244891BB6D40C0066E84F /* View */,
-				EDE244831BB68A1E0066E84F /* Controller */,
+				ED0444DB1BCA77DB00A37F92 /* Container */,
+				ED0444DA1BCA77C300A37F92 /* ArticleList */,
+				ED0444D91BCA77B800A37F92 /* Promotion */,
 			);
 			name = HomeView;
-			sourceTree = "<group>";
-		};
-		EDE2447C1BB6803E0066E84F /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				EDE244791BB680250066E84F /* DTDailies.h */,
-				EDE2447A1BB680250066E84F /* DTDailies.m */,
-				EDE2447D1BB680E40066E84F /* DTArticle.h */,
-				EDE2447E1BB680E40066E84F /* DTArticle.m */,
-				ED63F5461BBAAC4800EC6DE1 /* DTPromotion.h */,
-				ED63F5471BBAAC4800EC6DE1 /* DTPromotion.m */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		EDE244831BB68A1E0066E84F /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				EDE244841BB68A570066E84F /* DTHomeTableViewController.h */,
-				EDE244851BB68A570066E84F /* DTHomeTableViewController.m */,
-			);
-			name = Controller;
 			sourceTree = "<group>";
 		};
 		EDE244871BB68B120066E84F /* Macro */ = {
@@ -278,15 +347,6 @@
 				EDE244881BB68B3E0066E84F /* DTMacro.h */,
 			);
 			name = Macro;
-			sourceTree = "<group>";
-		};
-		EDE244891BB6D40C0066E84F /* View */ = {
-			isa = PBXGroup;
-			children = (
-				EDE2448A1BB6D44B0066E84F /* DTArticleCell.h */,
-				EDE2448B1BB6D44B0066E84F /* DTArticleCell.m */,
-			);
-			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -473,16 +533,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EDE2448C1BB6D44B0066E84F /* DTArticleCell.m in Sources */,
-				EDE244861BB68A570066E84F /* DTHomeTableViewController.m in Sources */,
+				ED0445041BCA930300A37F92 /* DTHeaderView.m in Sources */,
+				ED0444F01BCA796C00A37F92 /* DTHomeTableViewController.m in Sources */,
+				ED0444ED1BCA796600A37F92 /* DTArticleCell.m in Sources */,
+				ED0444F31BCA797800A37F92 /* DTPromotion.m in Sources */,
 				EDDE7DC71BB8C53A00C24368 /* DTDetailViewContoller.m in Sources */,
+				ED0444EA1BCA795C00A37F92 /* DTDailies.m in Sources */,
 				EDC716EA1BB8CCAD008B2CF0 /* DTDetailArticle.m in Sources */,
-				EDE2447B1BB680250066E84F /* DTDailies.m in Sources */,
-				EDD73CA71BB9924000DD3FD8 /* ALHeaderView.m in Sources */,
 				EDE244491BB644BB0066E84F /* AppDelegate.m in Sources */,
-				EDE2447F1BB680E40066E84F /* DTArticle.m in Sources */,
+				ED04450A1BCA945D00A37F92 /* DTHomeHeaderView.m in Sources */,
+				ED0444F91BCA79A200A37F92 /* DTPromotionViewController.m in Sources */,
+				ED0445071BCA93CE00A37F92 /* DTDetailHeaderView.m in Sources */,
+				ED0444E91BCA795C00A37F92 /* DTArticle.m in Sources */,
+				ED0444DE1BCA78AC00A37F92 /* DTHomeContainerController.m in Sources */,
 				EDE244461BB644BB0066E84F /* main.m in Sources */,
-				ED63F5481BBAAC4800EC6DE1 /* DTPromotion.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
