@@ -11,7 +11,6 @@
 @protocol DTPromotionDelegate <NSObject>
 
 - (UIPageControl *)promotionPageControl;
-- (void)promotionViewDidTaped:(id)promotionId;
 
 @end
 

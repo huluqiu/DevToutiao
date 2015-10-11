@@ -10,6 +10,6 @@
 
 @interface DTDetailViewContoller :UIViewController
 
-- (instancetype)initWithID:(id)articleId;
+@property (assign) id articleId;
 
 @end

@@ -12,7 +12,6 @@
 #define LocalHost @"http://localhost/v1/"
 //#define LocalHost @"http://192.168.1.101/v1/"
 
-#define HeadViewHeight 260
 #define NavigationHeight 64
 
 #endif /* DTMacro_h */

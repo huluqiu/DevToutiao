@@ -7,15 +7,16 @@
 //
 
 #import "DTPromotionViewController.h"
-#import "ALHeaderView.h"
 #import "DTMacro.h"
 #import "DTPromotion.h"
+#import "DTHomeHeaderView.h"
+#import "DTDetailViewContoller.h"
 
 #import <AFNetworking.h>
 #import <UIImageView+AFNetworking.h>
 #import <Masonry.h>
 
-@interface DTPromotionViewController ()
+@interface DTPromotionViewController () <UIScrollViewDelegate>
 @property (strong, nonatomic) NSMutableArray *promotionArray;
 @property (strong, nonatomic) NSMutableArray *pageViewArray;
 @property (strong, nonatomic) UIPageControl *pageControl;
@@ -55,9 +56,23 @@
     }];
 }
 
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self addTimer];
+}
+
+- (void)viewDidDisappear:(BOOL)animated{
+    [super viewDidDisappear:animated];
+    [self removeTimer];
+}
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)dealloc{
+    [self removeTimer];
 }
 
 - (void)reloadPromotion{
@@ -68,8 +83,6 @@
     for (NSInteger i = -1; ABS(i) <= self.promotionArray.count; i ++) {
         [self loadPromotionViewWithPage:i];
     }
-    
-    self.scrollTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(scrollPromotion:) userInfo:nil repeats:YES];
 }
 
 
@@ -78,9 +91,9 @@
         return;
     __weak typeof(self) weakSelf = self;
     NSInteger mPage = (page + 3) % 3;
-    ALHeaderView *pageView = self.pageViewArray[page + 1];
+    DTHomeHeaderView *pageView = self.pageViewArray[page + 1];
     if ((NSNull *)pageView == [NSNull null]) {
-        pageView = [[ALHeaderView alloc] initHeaderViewWithType:Page_Header];
+        pageView = [[DTHomeHeaderView alloc] init];
         [self.pageViewArray replaceObjectAtIndex:(page +1) withObject:pageView];
         
         CGRect frame = self.scrollView.frame;
@@ -102,11 +115,23 @@
 
 - (void)promotionViewTap:(UITapGestureRecognizer *)sender{
     if (sender.state == UIGestureRecognizerStateEnded) {
-        if ([self.delegate respondsToSelector:@selector(promotionViewDidTaped:)]) {
-            DTPromotion *promotion = self.promotionArray[self.pageControl.currentPage];
-            [self.delegate promotionViewDidTaped:promotion.promotionId];
-        }
+        UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+        DTPromotion *promotion = self.promotionArray[self.pageControl.currentPage];
+        DTDetailViewContoller *detailVC = [storyboard instantiateViewControllerWithIdentifier:@"detail view controller"];
+        detailVC.articleId = promotion.promotionId;
+        [self.navigationController pushViewController:detailVC animated:YES];
     }
+}
+
+- (void)addTimer{
+    if (!self.scrollTimer) {
+        self.scrollTimer = [NSTimer scheduledTimerWithTimeInterval:5 target:self selector:@selector(scrollPromotion:) userInfo:nil repeats:YES];
+    }
+}
+
+- (void)removeTimer{
+    [self.scrollTimer invalidate];
+    self.scrollTimer = nil;
 }
 
 - (void)scrollPromotion:(NSTimer *)timer{
@@ -129,6 +154,14 @@
 }
 
 #pragma mark - Scroll view delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    [self removeTimer];
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    [self addTimer];
+}
 
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView{
     CGFloat pageWidth = CGRectGetWidth(self.scrollView.frame);

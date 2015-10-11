@@ -17,7 +17,7 @@
 #import <Masonry.h>
 #import <UIImageView+AFNetworking.h>
 
-@interface DTHomeTableViewController () <UITableViewDataSource, UITableViewDelegate, UIScrollViewDelegate>
+@interface DTHomeTableViewController () <UIScrollViewDelegate>
 
 @property (strong, nonatomic) NSMutableArray *dailiesArray;
 
@@ -93,15 +93,6 @@
     return 80;
 }
 
-#pragma mark - Table view delegate
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
-    [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    DTDailies *dailies = self.dailiesArray[indexPath.section];
-    DTArticle *article = dailies.articleArray[indexPath.row];
-    DTDetailViewContoller *detailVC = [[DTDetailViewContoller alloc] initWithID:article.articleID];
-    [self.navigationController pushViewController:detailVC animated:YES];
-}
-
 #pragma mark - Scroll view delegate
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
     
@@ -117,6 +108,13 @@
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    if ([segue.destinationViewController isKindOfClass:[DTDetailViewContoller class]]) {
+        NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        DTDailies *dailies = self.dailiesArray[indexPath.section];
+        DTArticle *article = dailies.articleArray[indexPath.row];
+        DTDetailViewContoller *detailVC = (DTDetailViewContoller *)segue.destinationViewController;
+        detailVC.articleId = article.articleID;
+    }
 }
 
 @end

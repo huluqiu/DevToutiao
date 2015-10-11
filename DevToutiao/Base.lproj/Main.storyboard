@@ -138,6 +138,9 @@
                                     <animations/>
                                 </tableViewCellContentView>
                                 <animations/>
+                                <connections>
+                                    <segue destination="IbN-1X-O4C" kind="show" id="Rnm-DQ-sUq"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -149,6 +152,54 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7mf-sj-WFq" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1483" y="-225"/>
+        </scene>
+        <!--Detail View Contoller-->
+        <scene sceneID="Bxg-1U-rND">
+            <objects>
+                <viewController storyboardIdentifier="detail view controller" id="IbN-1X-O4C" customClass="DTDetailViewContoller" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="VRv-ME-kBZ"/>
+                        <viewControllerLayoutGuide type="bottom" id="EM3-Xi-ezp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ESi-Ec-KoY">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N8t-W8-bFP">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qQd-Ep-4aa" customClass="DTDetailHeaderView">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="200"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="200" id="jkg-w0-H3K"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qQd-Ep-4aa" firstAttribute="leading" secondItem="ESi-Ec-KoY" secondAttribute="leading" id="I9n-Fa-R9m"/>
+                            <constraint firstItem="N8t-W8-bFP" firstAttribute="top" secondItem="ESi-Ec-KoY" secondAttribute="top" id="RdH-hI-vmt"/>
+                            <constraint firstAttribute="bottom" secondItem="N8t-W8-bFP" secondAttribute="bottom" id="bkL-Ei-Vuv"/>
+                            <constraint firstAttribute="trailing" secondItem="N8t-W8-bFP" secondAttribute="trailing" id="nxW-TJ-Sga"/>
+                            <constraint firstAttribute="trailing" secondItem="qQd-Ep-4aa" secondAttribute="trailing" id="pcz-1x-whG"/>
+                            <constraint firstItem="N8t-W8-bFP" firstAttribute="leading" secondItem="ESi-Ec-KoY" secondAttribute="leading" id="tV0-yt-bE3"/>
+                            <constraint firstItem="qQd-Ep-4aa" firstAttribute="top" secondItem="ESi-Ec-KoY" secondAttribute="top" id="zeW-CL-2hn"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="headerView" destination="qQd-Ep-4aa" id="qGe-eJ-YfX"/>
+                        <outlet property="headerViewConstraint" destination="jkg-w0-H3K" id="Frz-Jq-ETx"/>
+                        <outlet property="webView" destination="N8t-W8-bFP" id="hSa-Im-hor"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ynl-S6-UGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2268" y="-225"/>
         </scene>
     </scenes>
 </document>

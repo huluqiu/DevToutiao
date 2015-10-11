@@ -9,61 +9,38 @@
 #import "DTDetailViewContoller.h"
 #import "DTDetailArticle.h"
 #import "DTMacro.h"
-#import "ALHeaderView.h"
+#import "DTDetailHeaderView.h"
 
 #import <AFNetworking.h>
 #import <Masonry.h>
 #import <UIImageView+AFNetworking.h>
 
-@interface DTDetailViewContoller () <UIScrollViewDelegate,UIGestureRecognizerDelegate>
+@interface DTDetailViewContoller () <UIGestureRecognizerDelegate, UIScrollViewDelegate>
 
-@property (assign) id articleId;
 @property (strong, nonatomic) DTDetailArticle *detailArticle;
-@property (strong, nonatomic) UIWebView *webView;
-@property (strong, nonatomic) ALHeaderView *headerView;
+@property (weak, nonatomic) IBOutlet DTDetailHeaderView *headerView;
+@property (weak, nonatomic) IBOutlet NSLayoutConstraint *headerViewConstraint;
+@property (assign, nonatomic) CGFloat headerViewHeight;
+@property (weak, nonatomic) IBOutlet UIWebView *webView;
 @property (copy, nonatomic) NSString *htmlString;
-@property (strong, nonatomic) UIImageView *imageView;
-@property (strong, nonatomic) UILabel *titleLabel;
-@property (strong, nonatomic) UILabel *authorLabel;
 
 @end
 
 @implementation DTDetailViewContoller
 
-- (instancetype)initWithID:(id)articleId{
-    if (self = [super init]) {
-        _articleId = articleId;
-    }
-    return self;
-}
-
-- (void)layoutSubViews{
-    __weak typeof(self) weakSelf = self;
-    self.webView = [[UIWebView alloc] init];
-    self.webView.scrollView.contentInset = UIEdgeInsetsMake(HeadViewHeight, 0, 0, 0);
+- (void)viewDidLoad{
+    [super viewDidLoad];
+    
+    self.navigationController.navigationBar.hidden = YES;
+    
+    self.headerViewHeight = self.headerViewConstraint.constant;
+    self.webView.scrollView.contentInset = UIEdgeInsetsMake(self.headerViewHeight - 20, 0, 0, 0);
     self.webView.scrollView.delegate = self;
-    [self.view addSubview:self.webView];
-    [self.webView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.edges.mas_offset(UIEdgeInsetsMake(0, 0, 0, 0));
-    }];
     
     UITapGestureRecognizer *webTap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(handleSingleTapInWebView:)];
     webTap.delegate = self;
     [self.webView addGestureRecognizer:webTap];
     
-    self.headerView = [[ALHeaderView alloc] initHeaderViewWithType:Detail_Header];
-    [self.view addSubview:self.headerView];
-    [self.headerView mas_makeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(HeadViewHeight);
-        make.top.equalTo(weakSelf.view);
-        make.left.equalTo(weakSelf.view);
-        make.right.equalTo(weakSelf.view);
-    }];
-}
-
-- (void)viewDidLoad{
-    [super viewDidLoad];
-    [self layoutSubViews];
     __weak typeof(self) weakSelf = self;
     
     AFHTTPRequestOperationManager *manager = [AFHTTPRequestOperationManager manager];
@@ -75,7 +52,7 @@
         [weakSelf.webView loadHTMLString:htmlStr baseURL:nil];
         
         NSURL *imageURL = [NSURL URLWithString:weakSelf.detailArticle.image];
-        [weakSelf.headerView.imageView setImageWithURL:imageURL];
+        [weakSelf.headerView.imageView setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"placeholder image"]];
         weakSelf.headerView.titleLabel.text = weakSelf.detailArticle.title;
         weakSelf.headerView.detailLabel.text = [NSString stringWithFormat:@"%@ by %@",weakSelf.detailArticle.original_site_name,weakSelf.detailArticle.author];
     } failure:^(AFHTTPRequestOperation * _Nonnull operation, NSError * _Nonnull error) {
@@ -93,7 +70,7 @@
 - (void)handleSingleTapInWebView:(UITapGestureRecognizer *)sender{
     CGPoint point =[sender locationInView:self.webView];
     
-    NSString *strImgUrl = [NSString stringWithFormat:@"document.elementFromPoint(%f,%f).src;",point.x,point.y - HeadViewHeight];
+    NSString *strImgUrl = [NSString stringWithFormat:@"document.elementFromPoint(%f,%f).src;",point.x,point.y - self.headerViewHeight];
     strImgUrl = [self.webView stringByEvaluatingJavaScriptFromString:strImgUrl];
     if (![strImgUrl isEqualToString:@""]){
         NSLog(@"get origin image url : %@",strImgUrl);
@@ -101,26 +78,32 @@
 }
 
 #pragma mark - Scroll view delegate
+
+- (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView{
+    
+}
+
+- (void)scrollViewDidEndDragging:(UIScrollView *)scrollView willDecelerate:(BOOL)decelerate{
+    
+}
+
 - (void)scrollViewDidScroll:(UIScrollView *)scrollView{
-    CGFloat offsetY = scrollView.contentOffset.y;
-    CGFloat delta = offsetY + HeadViewHeight;
-    CGFloat height = HeadViewHeight - delta;
     
-    if (height <= 0) {
-        height = 0;
-    }
-    
-    __weak typeof(self) weakSelf = self;
-    [self.headerView mas_remakeConstraints:^(MASConstraintMaker *make) {
-        make.height.mas_equalTo(height);
-        make.top.equalTo(weakSelf.view);
-        make.left.equalTo(weakSelf.view);
-        make.right.equalTo(weakSelf.view);
-    }];
-    
-    CGFloat alpha = delta / (HeadViewHeight - NavigationHeight);
-    if (alpha >= 1) {
-        alpha = 0.99;
+    if (scrollView.isDragging || scrollView.isDecelerating) {
+        CGFloat offsetY = scrollView.contentOffset.y;
+        CGFloat delta = offsetY + self.headerViewHeight;
+        CGFloat height = self.headerViewHeight - delta;
+        
+        if (height <= 0) {
+            height = 0;
+        }
+        
+        self.headerViewConstraint.constant = height;
+        
+        CGFloat alpha = delta / (self.headerViewHeight - NavigationHeight);
+        if (alpha >= 1) {
+            alpha = 0.99;
+        }
     }
 }
 
